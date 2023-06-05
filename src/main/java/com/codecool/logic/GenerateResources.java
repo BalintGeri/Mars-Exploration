@@ -1,5 +1,10 @@
 package com.codecool.logic;
 
+import com.codecool.data.Coordinate;
+import com.codecool.data.ElementType;
+import com.codecool.data.Map;
+import com.codecool.data.MapConfig;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;

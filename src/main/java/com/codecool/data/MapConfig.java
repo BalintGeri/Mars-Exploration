@@ -1,5 +1,7 @@
 package com.codecool.data;
 
+import com.codecool.ui.GetUserInput;
+
 public class MapConfig {
     private final int size;
     private final int noOfMtns;

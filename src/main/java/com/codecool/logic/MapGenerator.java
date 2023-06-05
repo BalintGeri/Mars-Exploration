@@ -1,5 +1,9 @@
 package com.codecool.logic;
 
+import com.codecool.data.ElementType;
+import com.codecool.data.Map;
+import com.codecool.data.MapConfig;
+
 import java.io.IOException;
 
 public class MapGenerator {
