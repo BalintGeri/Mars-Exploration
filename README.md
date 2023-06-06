@@ -23,3 +23,17 @@ All great, let's see the app in action and get a slice of the red planet on your
 * IntelliJ community edition
 
 are required to be installed on your system to run the application.
+
+After cloning the repository, open it in the above mentioned IDE. Open Main.java which is under this directory relative from project root:
+
+```
+src/main/java/com/codecool/Main.java
+```
+
+You should see this screen and click on the little "play" button indicated by the arrow on the top toolbar in the IDE:
+
+<img width="1440" alt="Screenshot 2023-06-06 at 12 16 04" src="https://github.com/BalintGeri/Mars-Exploration/assets/109275872/9aec115a-ff4f-49e4-8ac1-d969e5fa359f">
+
+After clicking on the green "play button" a terminal will open automatically in the IDE which will prompt you to to input the text requirements explained in the description above.
+
+📋 Instructions 🔍 for inputting criteria for map generation:
