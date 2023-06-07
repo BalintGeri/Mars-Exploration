@@ -3,33 +3,52 @@ package com.codecool.ui;
 import java.util.Scanner;
 
 public class UserInputProvider {
-    private int size;
-    private int noOfMTN;
-    private int noOfPit;
+    private int mapSize;
+    private int numberOfMountains;
+    private int numberOfPits;
     private String fileName;
+    private final Scanner scanner = new Scanner(System.in);
 
-    public int getNoOfMTN() {
-        return noOfMTN;
+    public int getNumberOfMountains() {
+        return numberOfMountains;
     }
 
-    public int getNoOfPit() {
-        return noOfPit;
+    public int getNumberOfPits() {
+        return numberOfPits;
     }
 
     public String getFileName() {
         return fileName;
     }
 
-    public int getSize() {
-        return size;
+    public int getMapSize() {
+        return mapSize;
     }
 
-    public void promptInput() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter map configuration \n File name for output \n Size of map \n Number of mountain groups \n Number of pit groups \n thanks");
-        fileName = scanner.nextLine();
-        size = scanner.nextInt();
-        noOfMTN = scanner.nextInt();
-        noOfPit = scanner.nextInt();
+    public void promptMapSize() {
+        mapSize = scanner.nextInt();
+    }
+
+    public void promptNumberOfMountains() {
+        numberOfMountains = scanner.nextInt();
+    }
+
+    public void promptNumberOfPits() {
+        numberOfPits = scanner.nextInt();
+    }
+
+    public void promptFileName() {
+        fileName = scanner.next();
+    }
+
+    public void getUserInput() {
+        System.out.println("Please, provide a single integer for the desired map size (will be the vertical and horizontal size of the 2D map, 20-200)!");
+        promptMapSize();
+        System.out.println("Please, provide a single integer for the desired number of mountains (1-10)!");
+        promptNumberOfMountains();
+        System.out.println("Please, provide a single integer for the desired number of pits (1-10)!");
+        promptNumberOfPits();
+        System.out.println("Please, provide the desired name of the file for the simulation to save (input the name only, can include any type of characters, .txt is not required)");
+        promptFileName();
     }
 }

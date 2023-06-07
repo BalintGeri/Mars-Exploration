@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Simulation {
     public void run() {
         UserInputProvider input = new UserInputProvider();
-        input.promptInput();
+        input.getUserInput();
         MapConfig config = new MapConfig(input);
         MapGenerator mapGenerator = new MapGenerator();
         try {

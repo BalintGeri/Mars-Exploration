@@ -9,9 +9,9 @@ public class MapConfig {
     private final String fileName;
 
     public MapConfig(UserInputProvider input) {
-        this.size = input.getSize();
-        this.noOfMtns = input.getNoOfMTN();
-        this.noOfPits = input.getNoOfPit();
+        this.size = input.getMapSize();
+        this.noOfMtns = input.getNumberOfMountains();
+        this.noOfPits = input.getNumberOfPits();
         this.fileName = input.getFileName();
     }
 

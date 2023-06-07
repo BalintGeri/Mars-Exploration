@@ -8,7 +8,6 @@ import java.io.IOException;
 
 public class MapGenerator {
     public void generateFullTerrainViewOfMars(MapConfig mapConfig) throws IOException {
-
         FileNameProvider name = new FileNameProvider(mapConfig.getFileName());
         String generateName = name.generateName();
         Map map = new Map(mapConfig);
