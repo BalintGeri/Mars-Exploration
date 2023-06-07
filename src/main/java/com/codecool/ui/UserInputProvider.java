@@ -2,7 +2,7 @@ package com.codecool.ui;
 
 import java.util.Scanner;
 
-public class GetUserInput {
+public class UserInputProvider {
     private int size;
     private int noOfMTN;
     private int noOfPit;
@@ -25,11 +25,11 @@ public class GetUserInput {
     }
 
     public void promptInput() {
-        Scanner myObj = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter map configuration \n File name for output \n Size of map \n Number of mountain groups \n Number of pit groups \n thanks");
-        fileName = myObj.nextLine();
-        size = myObj.nextInt();
-        noOfMTN = myObj.nextInt();
-        noOfPit = myObj.nextInt();
+        fileName = scanner.nextLine();
+        size = scanner.nextInt();
+        noOfMTN = scanner.nextInt();
+        noOfPit = scanner.nextInt();
     }
 }

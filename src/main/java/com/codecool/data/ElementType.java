@@ -19,6 +19,6 @@ public enum ElementType {
 
     @Override
     public String toString() {
-        return ""+value;
+        return String.valueOf(value);
     }
 }

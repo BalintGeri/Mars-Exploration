@@ -1,6 +1,6 @@
 package com.codecool.data;
 
-import com.codecool.ui.GetUserInput;
+import com.codecool.ui.UserInputProvider;
 
 public class MapConfig {
     private final int size;
@@ -8,7 +8,7 @@ public class MapConfig {
     private final int noOfPits;
     private final String fileName;
 
-    public MapConfig(GetUserInput input) {
+    public MapConfig(UserInputProvider input) {
         this.size = input.getSize();
         this.noOfMtns = input.getNoOfMTN();
         this.noOfPits = input.getNoOfPit();

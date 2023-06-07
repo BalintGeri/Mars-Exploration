@@ -3,22 +3,19 @@ package com.codecool.logic;
 import com.codecool.data.Coordinate;
 import com.codecool.data.ElementType;
 import com.codecool.data.Map;
-import com.codecool.data.MapConfig;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Random;
 
-public class GenerateResources implements RNGProvider {
-    MapConfig mapconfig;
-    Map map;
-    ElementType type;
-    LinkedHashMap<Coordinate, ElementType> mapWithLandscape;
-    ElementType parentTerrainElement;
+public class ResourceGenerator implements RNGProvider {
+    private final Map map;
+    private final ElementType type;
+    private final LinkedHashMap<Coordinate, ElementType> mapWithLandscape;
+    private final ElementType parentTerrainElement;
 
-    public GenerateResources(MapConfig mapconfig, Map map, LinkedHashMap<Coordinate, ElementType> mapWithLandscape, ElementType type, ElementType parentTerrainElement) {
-        this.mapconfig = mapconfig;
+    public ResourceGenerator(Map map, LinkedHashMap<Coordinate, ElementType> mapWithLandscape, ElementType type, ElementType parentTerrainElement) {
         this.map = map;
         this.mapWithLandscape = mapWithLandscape;
         this.type = type;
@@ -36,10 +33,11 @@ public class GenerateResources implements RNGProvider {
         }
         return null;
     }
+
     @Override
     public int sizeRNG() {
-        Random rand = new Random();
-        return rand.nextInt(2, 9);
+        Random random = new Random();
+        return random.nextInt(2, 9);
     }
 
     private List<Coordinate> getTerrainElements() {
@@ -47,7 +45,7 @@ public class GenerateResources implements RNGProvider {
         List<ElementType> types = mapWithLandscape.values().stream().toList();
         List<Coordinate> shapeList = new ArrayList<>();
         for (int i = 0; i < types.size(); i++) {
-            if(types.get(i).equals(parentTerrainElement)) {
+            if (types.get(i).equals(parentTerrainElement)) {
                 shapeList.add(coordinates.get(i));
             }
 
@@ -61,8 +59,8 @@ public class GenerateResources implements RNGProvider {
         return pits.get(rand.nextInt(pits.size()));
     }
 
-    private void setResource(Coordinate emptyCoord) {
-        map.setCoordinateElement(emptyCoord, this.type);
+    private void setResource(Coordinate emptyCoordinate) {
+        map.setCoordinateElement(emptyCoordinate, this.type);
     }
 
     public void initResources() {
