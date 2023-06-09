@@ -3,31 +3,31 @@ package com.codecool.data;
 import com.codecool.ui.UserInputProvider;
 
 public class MapConfig {
-    private final int size;
-    private final int noOfMtns;
-    private final int noOfPits;
+    private final int mapSize;
+    private final int numberOfMountains;
+    private final int numberOfPits;
     private final String fileName;
 
     public MapConfig(UserInputProvider input) {
-        this.size = input.getMapSize();
-        this.noOfMtns = input.getNumberOfMountains();
-        this.noOfPits = input.getNumberOfPits();
+        this.mapSize = input.getMapSize();
+        this.numberOfMountains = input.getNumberOfMountains();
+        this.numberOfPits = input.getNumberOfPits();
         this.fileName = input.getFileName();
     }
 
-    public int getSize() {
-        return size;
+    public int getMapSize() {
+        return mapSize;
     }
 
     public String getFileName() {
         return fileName;
     }
 
-    public int getNoOfMtns() {
-        return noOfMtns;
+    public int getNumberOfMountains() {
+        return numberOfMountains;
     }
 
-    public int getNoOfPits() {
-        return noOfPits;
+    public int getNumberOfPits() {
+        return numberOfPits;
     }
 }
