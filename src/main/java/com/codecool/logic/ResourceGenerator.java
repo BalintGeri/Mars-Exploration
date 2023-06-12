@@ -48,7 +48,6 @@ public class ResourceGenerator implements RNGProvider {
             if (types.get(i).equals(parentTerrainElement)) {
                 shapeList.add(coordinates.get(i));
             }
-
         }
         return shapeList;
     }
