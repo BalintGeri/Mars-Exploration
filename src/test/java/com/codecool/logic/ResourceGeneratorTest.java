@@ -10,14 +10,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.mockito.junit.jupiter.MockitoSettings;
-import org.mockito.quality.Strictness;
 
 import java.util.LinkedHashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -56,19 +53,6 @@ class ResourceGeneratorTest {
         //then
         assertNull(emptyCoordinate);
     }
-    //test case in progress
-    /*@MockitoSettings(strictness = Strictness.LENIENT)
-    @Test
-    public void getEmptyCoordinateWhenCoordinate00ThenEmpty() {
-        //given
-        Coordinate coordinate = new Coordinate(0,0);
-        when(map.getMapCoordinate(eq(coordinate))).thenReturn(null);
-        //when
-        Coordinate emptyCoordinate = resourceGenerator.getEmptyCoordinate(coordinate);
-        //then
-        assertEquals(0, emptyCoordinate.x());
-        assertEquals(0, emptyCoordinate.y());
-    }*/
 
     @Test
     public void sizeRNGReturnsValueInRange() {
