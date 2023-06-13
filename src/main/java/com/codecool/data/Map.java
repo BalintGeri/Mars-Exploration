@@ -24,7 +24,7 @@ public class Map {
     }
 
     private void generateMap() {
-        int size = this.config.getSize();
+        int size = this.config.getMapSize();
         for (int x = 0; x < size; x++) {
             for (int y = 0; y < size; y++) {
                 this.map.put(new Coordinate(x, y), ElementType.EMPTY);
@@ -35,8 +35,8 @@ public class Map {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < config.getSize(); i++) {
-            for (int j = 0; j < config.getSize(); j++) {
+        for (int i = 0; i < config.getMapSize(); i++) {
+            for (int j = 0; j < config.getMapSize(); j++) {
                 sb.append(map.get(new Coordinate(i, j)));
             }
             sb.append("\n");

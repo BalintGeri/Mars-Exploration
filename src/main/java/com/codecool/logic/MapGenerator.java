@@ -17,10 +17,10 @@ public class MapGenerator {
         ResourceGenerator water = new ResourceGenerator(map, map.getMap(), ElementType.WATER, ElementType.PIT);
         ResourceGenerator mineral = new ResourceGenerator(map, map.getMap(), ElementType.MINERAL, ElementType.MOUNTAIN);
 
-        for (int i = 0; i < mapConfig.getNoOfMtns(); i++) {
+        for (int i = 0; i < mapConfig.getNumberOfMountains(); i++) {
             generateMountains.placeMapObjectsBasedOnConfig();
         }
-        for (int i = 0; i < mapConfig.getNoOfPits(); i++) {
+        for (int i = 0; i < mapConfig.getNumberOfPits(); i++) {
             generatePit.placeMapObjectsBasedOnConfig();
         }
 

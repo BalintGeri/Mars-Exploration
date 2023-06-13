@@ -31,14 +31,14 @@ public class LandscapeGenerator implements EmptyProvider, RNGProvider {
                 if (temp.x() < 0) {
                     temp = new Coordinate(0, temp.y());
                 }
-                if (temp.x() >= this.mapconfig.getSize()) {
-                    temp = new Coordinate(mapconfig.getSize() - 1, temp.y());
+                if (temp.x() >= this.mapconfig.getMapSize()) {
+                    temp = new Coordinate(mapconfig.getMapSize() - 1, temp.y());
                 }
                 if (temp.y() < 0) {
                     temp = new Coordinate(temp.x(), 0);
                 }
-                if (temp.y() >= this.mapconfig.getSize()) {
-                    temp = new Coordinate(temp.x(), mapconfig.getSize() - 1);
+                if (temp.y() >= this.mapconfig.getMapSize()) {
+                    temp = new Coordinate(temp.x(), mapconfig.getMapSize() - 1);
                 }
                 if (map.getMapCoordinate(temp).equals(ElementType.EMPTY)) {
                     this.result.add(temp);
@@ -56,7 +56,7 @@ public class LandscapeGenerator implements EmptyProvider, RNGProvider {
 
     private Coordinate baseRNG() {
         Random random = new Random();
-        return new Coordinate(random.nextInt(1, mapconfig.getSize()), random.nextInt(1, mapconfig.getSize()));
+        return new Coordinate(random.nextInt(1, mapconfig.getMapSize()), random.nextInt(1, mapconfig.getMapSize()));
     }
 
     private Coordinate createTerrain(List<Coordinate> emptyCoordinates) {
